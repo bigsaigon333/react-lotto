@@ -10,7 +10,15 @@ export default class Modal extends React.Component {
               <path className="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
             </svg>
           </div>
-          <h2 className="text-2xl font-semibold text-center mb-4">🏆 당첨 통계 🏆</h2>
+          <h2 className="text-2xl font-semibold text-center mb-4">
+            <span role="img" aria-label="trophy">
+              🏆
+            </span>
+            당첨 통계
+            <span role="img" aria-label="trophy">
+              🏆
+            </span>
+          </h2>
           <div className="d-flex justify-center">
             <table className="">
               <thead>
