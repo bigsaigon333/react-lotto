@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   mode: 'jit',
@@ -18,10 +19,25 @@ module.exports = {
         4: '4',
         5: '5',
       },
+      ringWidth: {
+        0.5: '0.5px',
+        1.5: '1.5px',
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      ringColor: ['invalid', 'valid'],
+      backgroundColor: ['invalid', 'valid'],
+    },
   },
-  plugins: [],
+  plugins: ['invalid', 'valid'].map((variant) =>
+    plugin(({ addVariant, e }) => {
+      addVariant(variant, ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(`${variant}${separator}${className}`)}:${variant}`;
+        });
+      });
+    })
+  ),
 };

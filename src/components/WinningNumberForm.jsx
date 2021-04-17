@@ -94,7 +94,7 @@ export default class WinningNumberForm extends React.Component {
                     <input
                       id={`winning-number-${index}`}
                       type="number"
-                      className="mx-1 text-xl text-center w-14 h-14"
+                      className="mx-1 text-xl text-center w-14 h-14 appearance-textfield"
                       name={`winning-number-${index}`}
                       value={this.state.winningNumberInputValues[index]}
                       onChange={this.handleWinningNumberInputChange}
@@ -104,7 +104,7 @@ export default class WinningNumberForm extends React.Component {
               </div>
             </div>
             <div className="flex flex-col ">
-              <h3 className="mt-0 mb-3 text-center font-semibold text-lg">보너스 번호</h3>
+              <h3 className="mt-0 mb-3 text-center font-semibold text-lg ">보너스 번호</h3>
               <div className="flex justify-center">
                 <label htmlFor="bonus-number" className="sr-only">
                   보너스 번호
@@ -112,7 +112,7 @@ export default class WinningNumberForm extends React.Component {
                 <input
                   id="bonus-number"
                   type="number"
-                  className="mx-1 text-center w-14 h-14"
+                  className="mx-1 text-center w-14 h-14 appearance-textfield"
                   value={this.state.bonusNumberInputValue}
                   onChange={this.handleBonusNumberInputChange}
                 />

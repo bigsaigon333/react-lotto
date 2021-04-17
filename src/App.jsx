@@ -5,8 +5,7 @@ import TicketDetail from './components/TicketDetail';
 import WinningNumberForm from './components/WinningNumberForm';
 import Modal from './components/Modal';
 
-import 'tailwindcss/tailwind.css';
-import './App.css';
+import './tailwind.css';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -37,12 +36,12 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <main className="m-16 p-9 max-w-screen-sm mx-auto bg-gray-200 ">
-        <h1 className="text-center text-3xl	font-bold ">
+      <main className="m-16 p-9 max-w-screen-sm mx-auto">
+        <h1 className="text-center text-3xl	font-bold mb-10 select-none">
           <span role="img" aria-label="good-luck">
             🎱
           </span>
-          행운의 로또
+          {' 행운의 로또'}
         </h1>
         <PurchaseForm setTickets={this.setTickets} />
         <TicketDetail tickets={this.state.tickets} />
