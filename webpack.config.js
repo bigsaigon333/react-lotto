@@ -12,7 +12,9 @@ module.exports = () => {
     output: {
       filename: 'bundle.js',
       path: path.resolve(__dirname, 'build'),
-      clean: true,
+      clean: {
+        keep: /.git/,
+      },
     },
     devServer: {
       port: 3000,
